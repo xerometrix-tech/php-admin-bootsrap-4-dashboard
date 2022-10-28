@@ -1,2 +1,4 @@
 # PHP-admin-bootstrap-4-dashboard
 A PHP dashboard is a single or multi-tab visualization tool that can be integrated within PHP projects. Usually, these are browser-based applications that are built as a customizable component of larger projects. A PHP dashboard is designed to accept raw data from other components of the projects and then present it in various formats. These dashboards are generally built using JS because of great (and smooth) integration between PHP and JavaScript.
+
+This would be a simple application for sales management. It contains a dashboard where the users can see the sales stats and maintain the data about the Products and add new Products. Users could also register for logging into the dashboard. It is to show the power of PHP for back-end applications development.
