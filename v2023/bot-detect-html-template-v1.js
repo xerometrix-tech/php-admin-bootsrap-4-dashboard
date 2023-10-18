@@ -24,3 +24,6 @@ window.addEventListener("request", function() {
 if (detectBotTraffic()) {
   // Take action, such as blocking the user or displaying a warning message
 }
+
+
+// <script src="/assets/js/bot-detection.js"></script>
