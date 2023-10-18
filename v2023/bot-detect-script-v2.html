@@ -1,0 +1,41 @@
+<!--We use the window.location.href property to redirect the user to a different page, in this case, '/bot-detected.html'.
+If a bot is detected, the script will redirect the user's browser to the specified "bot-detected" page. 
+Make sure to create the bot-detected.html page in your project directory. 
+You can customize this page to display a message or take any other appropriate action for bot-detected traffic.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+</head>
+<body>
+    <script>
+        // Function to check if the user agent matches common bot patterns
+        function isBot() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            
+            const botPatterns = [
+                "bot", "crawler", "spider", "googlebot", "bingbot", "yahoo",
+            ];
+            
+            for (const pattern of botPatterns) {
+                if (userAgent.includes(pattern)) {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
+        // Check for bot traffic on page load
+        window.addEventListener('load', () => {
+            if (isBot()) {
+                // Redirect to the bot-detected page
+                window.location.href = '/bot-detected.html';
+            }
+        });
+    </script>
+</body>
+</html>
